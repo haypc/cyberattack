@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Կիբերբուլինգի իրազեկում | Cyberbullying awareness</title>
+    <title>Կիբերբուլինգի իրազեկում | Ապահովագրական փաթեթներ</title>
     <style>
         * {
             margin: 0;
@@ -136,7 +136,7 @@
             filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
         }
 
-        /* опасности — другие иконки (можно менять) */
+        /* опасности — другие иконки */
         .dangers-list li::before {
             content: "🧠";
         }
@@ -147,6 +147,68 @@
 
         .examples-list li::before {
             content: "📌";
+        }
+
+        /* страховые пакеты — карточки */
+        .insurance-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+
+        .insurance-card {
+            background: white;
+            border-radius: 2rem 2rem 1.5rem 1.5rem;
+            flex: 1 1 250px;
+            min-width: 240px;
+            padding: 2rem 1.5rem 1.8rem;
+            box-shadow: 0 12px 25px -10px rgba(28, 65, 97, 0.3);
+            border-top: 6px solid #2b6792;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .insurance-card:hover {
+            transform: translateY(-6px);
+            border-top-color: #1b4b6e;
+            box-shadow: 0 20px 30px -8px #1e3f5a;
+        }
+
+        .insurance-card h3 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: #103650;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .insurance-desc {
+            font-size: 1.08rem;
+            color: #2b4b65;
+            margin-bottom: 1.8rem;
+            flex-grow: 1;
+        }
+
+        .insurance-amount {
+            background: #dbeafe;
+            border-radius: 60px;
+            padding: 1rem 1.2rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: #033153;
+            border: 2px solid #7dabcc;
+            box-shadow: inset 0 1px 4px #b5d1e9;
+            margin-top: 0.5rem;
+        }
+
+        .insurance-amount small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #2d577b;
         }
 
         .remember-box {
@@ -200,6 +262,12 @@
             .remember-box {
                 padding: 1.2rem;
             }
+            .insurance-grid {
+                gap: 1rem;
+            }
+            .insurance-card h3 {
+                font-size: 1.6rem;
+            }
         }
 
         @media (max-width: 450px) {
@@ -209,12 +277,6 @@
             }
         }
 
-        /* скругление и тени */
-        .site-container, .lang-bar, .section-card, footer {
-            transition: all 0.2s;
-        }
-
-        /* дополнительные серо-голубые штрихи */
         .section-card:hover {
             border-left-color: #245e86;
             background: #f0f5fe;
@@ -233,7 +295,7 @@
             <button class="lang-btn" data-lang="pt-br">Português (BR)</button>
         </div>
 
-        <!-- основной контент с data-i18n атрибутами -->
+        <!-- основной контент с data-i18n атрибутами (добавлен раздел страхования) -->
         <div class="content">
             <!-- введение / главная -->
             <div class="section-card">
@@ -284,6 +346,33 @@
                 </ul>
             </div>
 
+            ===== НОВЫЙ РАЗДЕЛ: АПАՀՈՎԱԳՐԱԿԱՆ ՓԱԹԵԹՆԵՐ (СТРАХОВЫЕ ПАКЕТЫ) ===== -->
+            <div class="section-card">
+                <h2 data-i18n="insurance_main_title">Ապահովագրական փաթեթներ</h2>
+                <p data-i18n="insurance_main_desc">Մեր ընկերությունը առաջարկում է երեք տարբեր ապահովագրական փաթեթներ, որոնք նախատեսված են կիբերբուլինգի և կիբերանվտանգության տարբեր ռիսկերից պաշտպանվելու համար։</p>
+                
+                <div class="insurance-grid">
+                    <!-- basic package -->
+                    <div class="insurance-card">
+                        <h3 data-i18n="basic_title">Հիմնական փաթեթ</h3>
+                        <div class="insurance-desc" data-i18n="basic_desc">Այս փաթեթը նախատեսված է այն մարդկանց համար, ովքեր ցանկանում են ունենալ հիմնական պաշտպանություն ինտերնետում։ Այն ներառում է կիբերբուլինգի դեպքերի ուսումնասիրություն և մասնագիտական խորհրդատվություն։</div>
+                        <div class="insurance-amount" data-i18n="basic_amount">500,000 դրամ <small>առավելագույնը</small></div>
+                    </div>
+                    <!-- medium package -->
+                    <div class="insurance-card">
+                        <h3 data-i18n="medium_title">Միջին փաթեթ</h3>
+                        <div class="insurance-desc" data-i18n="medium_desc">Այս փաթեթը ապահովում է ավելի լայն պաշտպանություն։ Այն ներառում է աջակցություն կիբերբուլինգի, տվյալների արտահոսքի և առցանց սպառնալիքների դեպքում։</div>
+                        <div class="insurance-amount" data-i18n="medium_amount">1,500,000 դրամ <small>առավելագույնը</small></div>
+                    </div>
+                    <!-- premium package -->
+                    <div class="insurance-card">
+                        <h3 data-i18n="premium_title">Պրեմիում փաթեթ</h3>
+                        <div class="insurance-desc" data-i18n="premium_desc">Պրեմիում փաթեթը նախատեսված է առավելագույն պաշտպանության համար։ Այն ներառում է ամբողջական կիբերանվտանգության աջակցություն, իրավաբանական խորհրդատվություն և տեխնիկական օգնություն։</div>
+                        <div class="insurance-amount" data-i18n="premium_amount">5,000,000 դրամ <small>առավելագույնը</small></div>
+                    </div>
+                </div>
+            </div>
+
             <!-- հիշիր -->
             <div class="section-card remember-box">
                 <h2 data-i18n="remember_title" style="border-bottom-color: #2f6680;">Հիշիր</h2>
@@ -291,7 +380,7 @@
             </div>
         </div>
 
-        <!-- простой футер (не переводится, но в тему) -->
+        <!-- футер -->
         <footer>
             <span>© 2025 | իրազեկում կիբերբուլինգի մասին | #անվտանգ ինտերնետ</span>
         </footer>
@@ -299,7 +388,7 @@
 
     <script>
         (function() {
-            // ПЕРЕВОДЫ — все 6 языков (армянский, русский, английский, португальский, украинский, бразильский)
+            // ПЕРЕВОДЫ — все 6 языков, включая новые ключи для страховых пакетов
             const translations = {
                 hy: {
                     intro_title: "Գլխավոր (ներածություն)",
@@ -325,6 +414,18 @@
                     protect_item3: "Մի պատասխանիր վիրավորական հաղորդագրություններին",
                     protect_item4: "Բլոկ արա և զեկուցիր վիրավորող օգտատերերին",
                     protect_item5: "Պատմիր ծնողներին, ուսուցիչներին կամ վստահելի մեծահասակին",
+                    // страховые пакеты
+                    insurance_main_title: "Ապահովագրական փաթեթներ",
+                    insurance_main_desc: "Մեր ընկերությունը առաջարկում է երեք տարբեր ապահովագրական փաթեթներ, որոնք նախատեսված են կիբերբուլինգի և կիբերանվտանգության տարբեր ռիսկերից պաշտպանվելու համար։",
+                    basic_title: "Հիմնական փաթեթ",
+                    basic_desc: "Այս փաթեթը նախատեսված է այն մարդկանց համար, ովքեր ցանկանում են ունենալ հիմնական պաշտպանություն ինտերնետում։ Այն ներառում է կիբերբուլինգի դեպքերի ուսումնասիրություն և մասնագիտական խորհրդատվություն։",
+                    basic_amount: "500,000 դրամ առավելագույնը",
+                    medium_title: "Միջին փաթեթ",
+                    medium_desc: "Այս փաթեթը ապահովում է ավելի լայն պաշտպանություն։ Այն ներառում է աջակցություն կիբերբուլինգի, տվյալների արտահոսքի և առցանց սպառնալիքների դեպքում։",
+                    medium_amount: "1,500,000 դրամ առավելագույնը",
+                    premium_title: "Պրեմիում փաթեթ",
+                    premium_desc: "Պրեմիում փաթեթը նախատեսված է առավելագույն պաշտպանության համար։ Այն ներառում է ամբողջական կիբերանվտանգության աջակցություն, իրավաբանական խորհրդատվություն և տեխնիկական օգնություն։",
+                    premium_amount: "5,000,000 դրամ առավելագույնը",
                     remember_title: "Հիշիր",
                     remember_text: "Ինտերնետը պետք է լինի անվտանգ և հարգալից միջավայր բոլորի համար։ Յուրաքանչյուր մարդ արժանի է հարգանքի և անվտանգության։ Եթե դու կամ քո ընկերներից մեկը բախվում է կիբերբուլինգի, շատ կարևոր է չլռել և օգնություն խնդրել։"
                 },
@@ -352,6 +453,18 @@
                     protect_item3: "Не отвечайте на оскорбительные сообщения",
                     protect_item4: "Блокируйте и жалуйтесь на оскорбляющих пользователей",
                     protect_item5: "Расскажите родителям, учителям или доверенному взрослому",
+                    // страховые пакеты
+                    insurance_main_title: "Страховые пакеты",
+                    insurance_main_desc: "Наша компания предлагает три различных страховых пакета, предназначенных для защиты от различных рисков кибербуллинга и кибербезопасности.",
+                    basic_title: "Базовый пакет",
+                    basic_desc: "Этот пакет предназначен для людей, которые хотят иметь базовую защиту в интернете. Он включает анализ случаев кибербуллинга и профессиональную консультацию.",
+                    basic_amount: "500 000 драмов максимум",
+                    medium_title: "Средний пакет",
+                    medium_desc: "Этот пакет обеспечивает более широкую защиту. Он включает поддержку в случаях кибербуллинга, утечки данных и онлайн-угроз.",
+                    medium_amount: "1 500 000 драмов максимум",
+                    premium_title: "Премиум пакет",
+                    premium_desc: "Премиум пакет предназначен для максимальной защиты. Он включает полную поддержку кибербезопасности, юридическую консультацию и техническую помощь.",
+                    premium_amount: "5 000 000 драмов максимум",
                     remember_title: "Запомните",
                     remember_text: "Интернет должен быть безопасной и уважительной средой для всех. Каждый человек заслуживает уважения и безопасности. Если вы или один из ваших друзей сталкиваетесь с кибербуллингом, очень важно не молчать и просить о помощи."
                 },
@@ -379,6 +492,18 @@
                     protect_item3: "Do not respond to offensive messages",
                     protect_item4: "Block and report offending users",
                     protect_item5: "Tell parents, teachers or a trusted adult",
+                    // insurance packages
+                    insurance_main_title: "Insurance packages",
+                    insurance_main_desc: "Our company offers three different insurance packages designed to protect against various risks of cyberbullying and cybersecurity.",
+                    basic_title: "Basic package",
+                    basic_desc: "This package is intended for people who want to have basic protection on the internet. It includes analysis of cyberbullying cases and professional advice.",
+                    basic_amount: "500,000 dram maximum",
+                    medium_title: "Medium package",
+                    medium_desc: "This package provides broader protection. It includes support in case of cyberbullying, data leakage and online threats.",
+                    medium_amount: "1,500,000 dram maximum",
+                    premium_title: "Premium package",
+                    premium_desc: "The premium package is designed for maximum protection. It includes full cybersecurity support, legal advice and technical assistance.",
+                    premium_amount: "5,000,000 dram maximum",
                     remember_title: "Remember",
                     remember_text: "The internet should be a safe and respectful environment for everyone. Every person deserves respect and safety. If you or one of your friends is experiencing cyberbullying, it is very important not to remain silent and ask for help."
                 },
@@ -406,6 +531,18 @@
                     protect_item3: "Não responda a mensagens ofensivas",
                     protect_item4: "Bloqueie e denuncie utilizadores ofensivos",
                     protect_item5: "Conte aos pais, professores ou um adulto de confiança",
+                    // pacotes de seguro
+                    insurance_main_title: "Pacotes de seguro",
+                    insurance_main_desc: "Nossa empresa oferece três pacotes de seguro diferentes projetados para proteger contra vários riscos de cyberbullying e segurança cibernética.",
+                    basic_title: "Pacote Básico",
+                    basic_desc: "Este pacote é destinado a pessoas que desejam ter proteção básica na internet. Inclui análise de casos de cyberbullying e aconselhamento profissional.",
+                    basic_amount: "500.000 drams máximo",
+                    medium_title: "Pacote Intermediário",
+                    medium_desc: "Este pacote oferece uma proteção mais ampla. Inclui suporte em caso de cyberbullying, vazamento de dados e ameaças online.",
+                    medium_amount: "1.500.000 drams máximo",
+                    premium_title: "Pacote Premium",
+                    premium_desc: "O pacote premium é projetado para máxima proteção. Inclui suporte completo de segurança cibernética, aconselhamento jurídico e assistência técnica.",
+                    premium_amount: "5.000.000 drams máximo",
                     remember_title: "Lembre-se",
                     remember_text: "A Internet deve ser um ambiente seguro e respeitoso para todos. Cada pessoa merece respeito e segurança. Se você ou um dos seus amigos estiver a sofrer cyberbullying, é muito importante não ficar calado e pedir ajuda."
                 },
@@ -433,6 +570,18 @@
                     protect_item3: "Не відповідайте на образливі повідомлення",
                     protect_item4: "Блокуйте та скаржтеся на образливих користувачів",
                     protect_item5: "Розкажіть батькам, вчителям або довіреній дорослій людині",
+                    // страхові пакети
+                    insurance_main_title: "Страхові пакети",
+                    insurance_main_desc: "Наша компанія пропонує три різні страхові пакети, призначені для захисту від різних ризиків кібербулінгу та кібербезпеки.",
+                    basic_title: "Базовий пакет",
+                    basic_desc: "Цей пакет призначений для людей, які хочуть мати базовий захист в інтернеті. Він включає аналіз випадків кібербулінгу та професійну консультацію.",
+                    basic_amount: "500 000 драмів максимум",
+                    medium_title: "Середній пакет",
+                    medium_desc: "Цей пакет забезпечує ширший захист. Він включає підтримку у випадках кібербулінгу, витоку даних та онлайн-загроз.",
+                    medium_amount: "1 500 000 драмів максимум",
+                    premium_title: "Преміум пакет",
+                    premium_desc: "Преміум пакет призначений для максимального захисту. Він включає повну підтримку кібербезпеки, юридичну консультацію та технічну допомогу.",
+                    premium_amount: "5 000 000 драмів максимум",
                     remember_title: "Запам'ятайте",
                     remember_text: "Інтернет має бути безпечним і шанобливим середовищем для всіх. Кожна людина заслуговує на повагу та безпеку. Якщо ви або хтось із ваших друзів стикається з кібербулінгом, дуже важливо не мовчати і звернутися по допомогу."
                 },
@@ -460,53 +609,52 @@
                     protect_item3: "Não responda a mensagens ofensivas",
                     protect_item4: "Bloqueie e denuncie usuários ofensivos",
                     protect_item5: "Conte aos pais, professores ou a um adulto de confiança",
+                    // pacotes de seguro
+                    insurance_main_title: "Pacotes de seguro",
+                    insurance_main_desc: "Nossa empresa oferece três pacotes de seguro diferentes, projetados para proteger contra vários riscos de cyberbullying e segurança cibernética.",
+                    basic_title: "Pacote Básico",
+                    basic_desc: "Este pacote é destinado a pessoas que desejam ter proteção básica na internet. Inclui análise de casos de cyberbullying e aconselhamento profissional.",
+                    basic_amount: "500.000 drams no máximo",
+                    medium_title: "Pacote Intermediário",
+                    medium_desc: "Este pacote oferece uma proteção mais ampla. Inclui suporte em caso de cyberbullying, vazamento de dados e ameaças online.",
+                    medium_amount: "1.500.000 drams no máximo",
+                    premium_title: "Pacote Premium",
+                    premium_desc: "O pacote premium é projetado para máxima proteção. Inclui suporte completo de segurança cibernética, aconselhamento jurídico e assistência técnica.",
+                    premium_amount: "5.000.000 drams no máximo",
                     remember_title: "Lembre-se",
                     remember_text: "A Internet deve ser um ambiente seguro e respeitoso para todos. Cada pessoa merece respeito e segurança. Se você ou um de seus amigos estiver sofrendo cyberbullying, é muito importante não ficar calado e pedir ajuda."
                 }
             };
 
-            // Получаем все элементы с data-i18n
             const i18nElements = document.querySelectorAll('[data-i18n]');
             const langButtons = document.querySelectorAll('.lang-btn');
 
-            // Функция переключения языка
             function switchLanguage(lang) {
-                if (!translations[lang]) return; // если нет такого языка
+                if (!translations[lang]) return;
 
-                // обновляем текст у всех элементов
                 i18nElements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     if (translations[lang][key]) {
+                        // для insurance-amount нужно сохранить html (внутри small), но мы передаем текст с small внутри? в наших переводах есть "максимум" как часть строки. упростим: innerHTML
                         el.innerHTML = translations[lang][key];
                     }
                 });
 
-                // обновляем активный класс на кнопках
                 langButtons.forEach(btn => {
                     const btnLang = btn.getAttribute('data-lang');
-                    if (btnLang === lang) {
-                        btn.classList.add('active');
-                    } else {
-                        btn.classList.remove('active');
-                    }
+                    btn.classList.toggle('active', btnLang === lang);
                 });
             }
 
-            // Навешиваем обработчики на каждую кнопку
             langButtons.forEach(btn => {
                 btn.addEventListener('click', (e) => {
-                    const lang = e.currentTarget.getAttribute('data-lang');
-                    switchLanguage(lang);
+                    switchLanguage(e.currentTarget.getAttribute('data-lang'));
                 });
             });
 
-            // начальный язык — армянский (уже активен по умолчанию в разметке)
-            // Но на всякий случай синхронизируем, если вдруг не совпадает:
-            const activeExists = [...langButtons].some(b => b.classList.contains('active') && b.getAttribute('data-lang') === 'hy');
-            if (!activeExists) {
-                // сбрасываем на армянский принудительно
-                switchLanguage('hy');
-            }
+            // активный язык при загрузке — армянский
+            // уже установлен в разметке, но синхронизируем тексты на всякий случай
+            switchLanguage('hy');
         })();
     </script>
 </body>
