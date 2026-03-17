@@ -2,114 +2,113 @@
 <html lang="hy">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Կիբերբուլինգի իրազեկում | Ապահովագրական փաթեթներ</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            font-family: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
         }
 
         body {
-            background: linear-gradient(145deg, #eef2f7 0%, #dbe1ec 100%);
+            background: linear-gradient(155deg, #eef3f9 0%, #d5deec 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 1rem;
+            padding: 12px;
         }
 
         .site-container {
             max-width: 1300px;
             width: 100%;
-            background: rgba(255,255,255,0.6);
-            backdrop-filter: blur(3px);
-            border-radius: 2.5rem 2.5rem 2rem 2rem;
-            box-shadow: 0 25px 45px -12px rgba(28, 52, 84, 0.35);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 2rem 2rem 1.5rem 1.5rem;
+            box-shadow: 0 25px 40px -18px rgba(18, 45, 70, 0.4);
             overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.5);
+            border: 1px solid rgba(255, 255, 255, 0.7);
         }
 
-        /* language bar — сине-серый */
         .lang-bar {
-            background: #1e3b5c; /* глубокий синий */
-            padding: 0.9rem 2rem;
+            background: #113952;
+            padding: 1rem 1.5rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 0.6rem 0.4rem;
-            border-bottom: 3px solid #6c8ea0;
+            gap: 0.5rem 0.4rem;
+            border-bottom: 3px solid #598aa8;
         }
 
         .lang-btn {
             background: transparent;
-            border: 1.5px solid #a0bfd0;
-            color: #e6f0fa;
+            border: 1.5px solid #8db5cf;
+            color: #e3f0fa;
             font-weight: 600;
             font-size: 0.9rem;
-            padding: 0.5rem 1.1rem;
+            padding: 0.5rem 1rem;
             border-radius: 40px;
             cursor: pointer;
-            transition: 0.2s ease;
+            transition: all 0.2s ease;
             letter-spacing: 0.3px;
-            backdrop-filter: blur(4px);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            min-width: 70px;
+            text-align: center;
         }
 
         .lang-btn:hover {
-            background: #346b8c;
-            border-color: #f0f9ff;
+            background: #2b6080;
+            border-color: #ffffff;
             color: white;
             transform: scale(1.02);
         }
 
         .lang-btn.active {
-            background: #6fa3c9;
+            background: #7fb2d4;
             border-color: white;
-            color: #0b2233;
-            box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+            color: #0b2638;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.7);
             font-weight: 700;
         }
 
-        /* main content card */
         .content {
-            padding: 2.5rem 2.2rem;
-            background: rgba(248, 250, 255, 0.7);
-            backdrop-filter: blur(2px);
+            padding: 2.2rem 2rem;
+            background: rgba(250, 253, 255, 0.6);
         }
 
-        /* каждый блок — карточка */
         .section-card {
-            background: #f4f7fc; /* светлый серый */
-            border-left: 8px solid #467a9e; /* синий акцент */
-            border-radius: 2rem 1rem 1rem 2rem;
+            background: #f5f9ff;
+            border-left: 8px solid #3f7b9e;
+            border-radius: 2rem 1.2rem 1.2rem 2rem;
             padding: 2rem 2rem 1.8rem 2rem;
             margin-bottom: 2.5rem;
-            box-shadow: 0 8px 18px -6px rgba(35, 55, 80, 0.2);
-            transition: 0.15s;
+            box-shadow: 0 10px 20px -12px rgba(21, 50, 75, 0.25);
+            transition: box-shadow 0.2s, border-left-color 0.2s;
         }
 
-        .section-card:last-child {
-            margin-bottom: 0;
+        .section-card:hover {
+            border-left-color: #1d5980;
+            box-shadow: 0 15px 25px -14px #1b3d55;
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 2.1rem;
             font-weight: 700;
-            color: #11354e;
-            margin-bottom: 1.4rem;
-            border-bottom: 3px dashed #8fb5cf;
+            color: #0f344d;
+            margin-bottom: 1.2rem;
+            border-bottom: 3px dashed #94bcd6;
             padding-bottom: 0.6rem;
             display: inline-block;
+            line-height: 1.2;
         }
 
         p {
-            font-size: 1.18rem;
+            font-size: 1.2rem;
             line-height: 1.6;
-            color: #1f2c3a;
-            margin-bottom: 1.4rem;
+            color: #1d3140;
+            margin-bottom: 1.2rem;
             font-weight: 400;
         }
 
@@ -119,174 +118,291 @@
         }
 
         li {
-            font-size: 1.12rem;
+            font-size: 1.15rem;
             margin-bottom: 1rem;
-            padding-left: 2.2rem;
+            padding-left: 2.3rem;
             position: relative;
-            color: #1e3749;
+            color: #1a3b4e;
             font-weight: 500;
         }
 
         li::before {
-            content: "⚠️";
             position: absolute;
             left: 0;
             top: -2px;
-            font-size: 1.4rem;
-            filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+            font-size: 1.5rem;
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.1));
         }
 
-        /* опасности — другие иконки */
-        .dangers-list li::before {
-            content: "🧠";
-        }
+        .examples-list li::before { content: "📌"; }
+        .dangers-list li::before { content: "🧠"; }
+        .protect-list li::before { content: "🛡️"; }
 
-        .protect-list li::before {
-            content: "🛡️";
-        }
-
-        .examples-list li::before {
-            content: "📌";
-        }
-
-        /* страховые пакеты — карточки */
         .insurance-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 1.8rem;
-            margin-top: 1.5rem;
+            gap: 2rem;
+            margin: 2rem 0 1rem;
             justify-content: center;
         }
 
         .insurance-card {
             background: white;
             border-radius: 2rem 2rem 1.5rem 1.5rem;
-            flex: 1 1 250px;
-            min-width: 240px;
-            padding: 2rem 1.5rem 1.8rem;
-            box-shadow: 0 12px 25px -10px rgba(28, 65, 97, 0.3);
-            border-top: 6px solid #2b6792;
-            transition: all 0.2s;
+            flex: 1 1 260px;
+            max-width: 320px;
+            padding: 2rem 1.5rem 2rem;
+            box-shadow: 0 15px 30px -12px rgba(22, 57, 83, 0.25);
+            border-top: 6px solid #2e6c96;
+            transition: all 0.25s ease;
             display: flex;
             flex-direction: column;
         }
 
         .insurance-card:hover {
-            transform: translateY(-6px);
-            border-top-color: #1b4b6e;
-            box-shadow: 0 20px 30px -8px #1e3f5a;
+            transform: translateY(-8px);
+            border-top-color: #164a6b;
+            box-shadow: 0 22px 35px -14px #103f5a;
         }
 
         .insurance-card h3 {
-            font-size: 1.9rem;
+            font-size: 2rem;
             font-weight: 800;
-            color: #103650;
-            margin-bottom: 0.75rem;
+            color: #0d324b;
+            margin-bottom: 0.9rem;
             line-height: 1.2;
         }
 
         .insurance-desc {
-            font-size: 1.08rem;
-            color: #2b4b65;
+            font-size: 1.1rem;
+            color: #2c4e68;
             margin-bottom: 1.8rem;
             flex-grow: 1;
+            line-height: 1.5;
         }
 
         .insurance-amount {
-            background: #dbeafe;
-            border-radius: 60px;
-            padding: 1rem 1.2rem;
+            background: #d9ebf7;
+            border-radius: 40px;
+            padding: 1rem 0.8rem;
             text-align: center;
             font-weight: 700;
-            font-size: 1.4rem;
-            color: #033153;
-            border: 2px solid #7dabcc;
-            box-shadow: inset 0 1px 4px #b5d1e9;
-            margin-top: 0.5rem;
+            font-size: 1.35rem;
+            color: #023256;
+            border: 2px solid #80b0d1;
+            margin-top: 0.3rem;
         }
 
-        .insurance-amount small {
-            font-size: 1rem;
-            font-weight: 400;
-            color: #2d577b;
+        .insurance-monthly {
+            background: #edf5fc;
+            border-radius: 40px;
+            padding: 0.8rem 0.8rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #0c4b73;
+            border: 2px dashed #5699c2;
+            margin-top: 0.7rem;
+        }
+
+        /* Contact block with address */
+        .contact-box {
+            background: #d1e3f2;
+            border-radius: 2.5rem;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border: 2px solid white;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .contact-box p {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0c2e44;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 1.5rem 1rem;
+            border-radius: 4rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: white;
+            padding: 0.9rem 2rem;
+            border-radius: 60px;
+            box-shadow: 0 8px 15px rgba(0, 30, 50, 0.1);
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #104062;
+            word-break: break-word;
+        }
+
+        .contact-item span:first-child {
+            font-size: 1.8rem;
         }
 
         .remember-box {
-            background: #d6e4f0;
-            border-radius: 2rem;
+            background: #d3e4f2;
+            border-radius: 2.5rem;
             padding: 2rem 2.5rem;
             text-align: center;
             border: 2px solid white;
+            margin-top: 1rem;
         }
 
         .remember-box p {
             margin-bottom: 0;
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-weight: 600;
-            color: #10344b;
+            color: #0e3851;
         }
 
         footer {
             margin-top: 2rem;
             text-align: center;
-            font-size: 0.95rem;
-            color: #2b4c66;
-            background: rgba(212, 228, 242, 0.7);
+            font-size: 1rem;
+            color: #214c69;
+            background: rgba(215, 231, 245, 0.8);
             padding: 1.2rem;
             border-radius: 3rem 3rem 1.5rem 1.5rem;
-            border: 1px solid #aec9dd;
-            backdrop-filter: blur(2px);
+            border: 1px solid #b3cfe6;
         }
 
-        /* адаптация для телефона */
-        @media (max-width: 700px) {
+        /* ========== АДАПТАЦИЯ ========== */
+        @media (max-width: 800px) {
             .content {
-                padding: 1.5rem 1rem;
+                padding: 1.8rem 1.2rem;
+            }
+            h2 {
+                font-size: 1.9rem;
+            }
+            p, li {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 8px;
+            }
+            .lang-bar {
+                padding: 0.8rem 0.5rem;
+                gap: 0.4rem;
+            }
+            .lang-btn {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.7rem;
+                min-width: 60px;
+            }
+            .content {
+                padding: 1.2rem 0.8rem;
             }
             .section-card {
                 padding: 1.5rem 1.2rem;
+                margin-bottom: 1.8rem;
+                border-left-width: 6px;
             }
             h2 {
                 font-size: 1.7rem;
+                border-bottom-width: 2px;
             }
-            p, li {
+            p {
                 font-size: 1rem;
             }
-            .lang-bar {
-                padding: 0.7rem 0.5rem;
+            li {
+                font-size: 1rem;
+                padding-left: 2rem;
             }
-            .lang-btn {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.8rem;
+            li::before {
+                font-size: 1.3rem;
             }
-            .remember-box {
-                padding: 1.2rem;
-            }
-            .insurance-grid {
-                gap: 1rem;
+            .insurance-card {
+                max-width: 100%;
+                flex: 1 1 100%;
             }
             .insurance-card h3 {
-                font-size: 1.6rem;
+                font-size: 1.9rem;
+            }
+            .insurance-amount, .insurance-monthly {
+                font-size: 1.2rem;
+                padding: 0.8rem 0.5rem;
+            }
+            .contact-box p {
+                font-size: 1.3rem;
+            }
+            .contact-details {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                padding: 1.2rem;
+            }
+            .contact-item {
+                width: 100%;
+                justify-content: center;
+                padding: 0.8rem 1rem;
+                font-size: 1.1rem;
+            }
+            .remember-box {
+                padding: 1.5rem 1rem;
+            }
+            .remember-box p {
+                font-size: 1.2rem;
+            }
+            footer {
+                font-size: 0.9rem;
+                padding: 1rem;
             }
         }
 
         @media (max-width: 450px) {
+            h2 {
+                font-size: 1.5rem;
+            }
             .lang-btn {
                 flex: 1 0 auto;
-                text-align: center;
+                max-width: 100px;
+            }
+            .contact-item {
+                flex-wrap: wrap;
+                font-size: 1rem;
+            }
+            .insurance-card h3 {
+                font-size: 1.7rem;
+            }
+            .insurance-amount, .insurance-monthly {
+                font-size: 1.1rem;
             }
         }
 
-        .section-card:hover {
-            border-left-color: #245e86;
-            background: #f0f5fe;
+        @media (max-width: 360px) {
+            .lang-btn {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.4rem;
+                min-width: 50px;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+
+        .insurance-amount small, .insurance-monthly small {
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
     </style>
 </head>
 <body>
     <div class="site-container">
-        <!-- панель языков: все 6 языков, активный — армянский -->
-        <div class="lang-bar" id="languageBar">
+        <div class="lang-bar">
             <button class="lang-btn active" data-lang="hy">Հայերեն</button>
             <button class="lang-btn" data-lang="ru">Русский</button>
             <button class="lang-btn" data-lang="en">English</button>
@@ -295,21 +411,20 @@
             <button class="lang-btn" data-lang="pt-br">Português (BR)</button>
         </div>
 
-        <!-- основной контент с data-i18n атрибутами (добавлен раздел страхования) -->
         <div class="content">
-            <!-- введение / главная -->
+            <!-- введение -->
             <div class="section-card">
                 <h2 data-i18n="intro_title">Գլխավոր (ներածություն)</h2>
                 <p data-i18n="intro_text">Ինտերնետը դարձել է մեր կյանքի կարևոր մասը։ Մենք շփվում ենք, սովորում, խաղում և տեղեկություններ ենք ստանում առցանց միջավայրում։ Սակայն ինտերնետը կարող է ունենալ նաև վտանգներ։ Այդ վտանգներից մեկը կիբերբուլինգն է։ Այս կայքի նպատակն է օգնել մարդկանց հասկանալ, թե ինչ է կիբերբուլինգը, ինչ վնաս կարող է պատճառել և ինչպես կարելի է պաշտպանվել դրանից։</p>
             </div>
 
-            <!-- ինչ է կիբերբուլինգը -->
+            <!-- что такое кибербуллинг -->
             <div class="section-card">
                 <h2 data-i18n="what_title">Ինչ է կիբերբուլինգը</h2>
-                <p data-i18n="what_text">Կիբերբուլինգը մարդկանց նկատմամբ իրականացվող վիրավորանքն ու ճնշումն է ինտերնետի միջոցով։ Դա կարող է լինել սոցիալական ցանցերում վիրավորական մեկնաբանություններ գրելը, կեղծ լուրեր տարածելը, անձնական լուսանկարներ տարածելը կամ սպառնալը հաղորդագրությունների միջոցով։ Կիբերբուլինգը հաճախ տեղի է ունենում այնպիսի հարթակներում, ինչպիսիք են սոցիալական ցանցերը, մեսենջերները կամ խաղային չաթերը։</p>
+                <p data-i18n="what_text">Կիբերբուլինգը մարդկանց նկատմամբ իրականացվող վիրավորանքն ու ճնշումն է ինտերնետի միջոցով։ Դա կարող է լինել սոցիալական ցանցերում վիրավորական մեկնաբանություններ գրելը, կեղծ լուրեր տարածելը, անձնական լուսանկարներ տարածելը կամ սպառնալը հաղորդագրությունների միջոցով։</p>
             </div>
 
-            <!-- օրինակներ -->
+            <!-- примеры -->
             <div class="section-card">
                 <h2 data-i18n="examples_title">Կիբերբուլինգի օրինակներ</h2>
                 <ul class="examples-list">
@@ -321,7 +436,7 @@
                 </ul>
             </div>
 
-            <!-- վտանգները -->
+            <!-- опасности -->
             <div class="section-card">
                 <h2 data-i18n="dangers_title">Վտանգները</h2>
                 <p data-i18n="dangers_intro">Կիբերբուլինգը կարող է լուրջ ազդեցություն ունենալ մարդու հոգեբանական վիճակի վրա։ Այն կարող է առաջացնել․</p>
@@ -331,10 +446,10 @@
                     <li data-i18n="dangers_item3">միայնության զգացում</li>
                     <li data-i18n="dangers_item4">ուսման կամ աշխատանքի նկատմամբ հետաքրքրության նվազում</li>
                 </ul>
-                <p data-i18n="dangers_footer" style="margin-top: 1.5rem;">Հաճախ մարդիկ չեն խոսում այս խնդրի մասին, սակայն շատ կարևոր է օգնություն խնդրել։</p>
+                <p data-i18n="dangers_footer" style="margin-top:1.2rem;">Հաճախ մարդիկ չեն խոսում այս խնդրի մասին, սակայն շատ կարևոր է օգնություն խնդրել։</p>
             </div>
 
-            <!-- ինչպես պաշտպանվել -->
+            <!-- защита -->
             <div class="section-card">
                 <h2 data-i18n="protect_title">Ինչպես պաշտպանվել</h2>
                 <ul class="protect-list">
@@ -346,41 +461,58 @@
                 </ul>
             </div>
 
-            ===== НОВЫЙ РАЗДЕЛ: АПАՀՈՎԱԳՐԱԿԱՆ ՓԱԹԵԹՆԵՐ (СТРАХОВЫЕ ПАКЕТЫ) ===== -->
+            <!-- страховые пакеты -->
             <div class="section-card">
                 <h2 data-i18n="insurance_main_title">Ապահովագրական փաթեթներ</h2>
                 <p data-i18n="insurance_main_desc">Մեր ընկերությունը առաջարկում է երեք տարբեր ապահովագրական փաթեթներ, որոնք նախատեսված են կիբերբուլինգի և կիբերանվտանգության տարբեր ռիսկերից պաշտպանվելու համար։</p>
                 
                 <div class="insurance-grid">
-                    <!-- basic package -->
                     <div class="insurance-card">
                         <h3 data-i18n="basic_title">Հիմնական փաթեթ</h3>
                         <div class="insurance-desc" data-i18n="basic_desc">Այս փաթեթը նախատեսված է այն մարդկանց համար, ովքեր ցանկանում են ունենալ հիմնական պաշտպանություն ինտերնետում։ Այն ներառում է կիբերբուլինգի դեպքերի ուսումնասիրություն և մասնագիտական խորհրդատվություն։</div>
-                        <div class="insurance-amount" data-i18n="basic_amount">500,000 դրամ <small>առավելագույնը</small></div>
+                        <div class="insurance-amount" data-i18n="basic_amount">500,000 դրամ <small>փոխհատուցում</small></div>
+                        <div class="insurance-monthly" data-i18n="basic_monthly">Ամսական 41,700 դրամ</div>
                     </div>
-                    <!-- medium package -->
                     <div class="insurance-card">
                         <h3 data-i18n="medium_title">Միջին փաթեթ</h3>
                         <div class="insurance-desc" data-i18n="medium_desc">Այս փաթեթը ապահովում է ավելի լայն պաշտպանություն։ Այն ներառում է աջակցություն կիբերբուլինգի, տվյալների արտահոսքի և առցանց սպառնալիքների դեպքում։</div>
-                        <div class="insurance-amount" data-i18n="medium_amount">1,500,000 դրամ <small>առավելագույնը</small></div>
+                        <div class="insurance-amount" data-i18n="medium_amount">1,500,000 դրամ <small>փոխհատուցում</small></div>
+                        <div class="insurance-monthly" data-i18n="medium_monthly">Ամսական 125,000 դրամ</div>
                     </div>
-                    <!-- premium package -->
                     <div class="insurance-card">
                         <h3 data-i18n="premium_title">Պրեմիում փաթեթ</h3>
                         <div class="insurance-desc" data-i18n="premium_desc">Պրեմիում փաթեթը նախատեսված է առավելագույն պաշտպանության համար։ Այն ներառում է ամբողջական կիբերանվտանգության աջակցություն, իրավաբանական խորհրդատվություն և տեխնիկական օգնություն։</div>
-                        <div class="insurance-amount" data-i18n="premium_amount">5,000,000 դրամ <small>առավելագույնը</small></div>
+                        <div class="insurance-amount" data-i18n="premium_amount">5,000,000 դրամ <small>փոխհատուցում</small></div>
+                        <div class="insurance-monthly" data-i18n="premium_monthly">Ամսական 416,700 դրամ</div>
                     </div>
                 </div>
             </div>
 
-            <!-- հիշիր -->
+            <!-- контакты + АДРЕС (новый) -->
+            <div class="contact-box">
+                <p data-i18n="contact_title">Փաթեթներին ավելի մանրամասն ծանոթանալու համար</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span>📞</span> <span data-i18n="phone">+37498455252</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span> <span data-i18n="instagram">ԹԱԱԱ.ընկերություն</span>
+                    </div>
+                    <!-- НОВАЯ СТРОКА АДРЕСА -->
+                    <div class="contact-item">
+                        <span>📍</span> <span data-i18n="address">Քաղաք Գյումրի, Կոմիտասի 11</span>
+                    </div>
+                </div>
+                <p style="margin-top: 1rem; font-size: 1.2rem;" data-i18n="contact_hint">զանգահարեք, գրեք կամ այցելեք մեր գրասենյակ</p>
+            </div>
+
+            <!-- remember -->
             <div class="section-card remember-box">
-                <h2 data-i18n="remember_title" style="border-bottom-color: #2f6680;">Հիշիր</h2>
+                <h2 data-i18n="remember_title">Հիշիր</h2>
                 <p data-i18n="remember_text">Ինտերնետը պետք է լինի անվտանգ և հարգալից միջավայր բոլորի համար։ Յուրաքանչյուր մարդ արժանի է հարգանքի և անվտանգության։ Եթե դու կամ քո ընկերներից մեկը բախվում է կիբերբուլինգի, շատ կարևոր է չլռել և օգնություն խնդրել։</p>
             </div>
         </div>
 
-        <!-- футер -->
         <footer>
             <span>© 2025 | իրազեկում կիբերբուլինգի մասին | #անվտանգ ինտերնետ</span>
         </footer>
@@ -388,13 +520,12 @@
 
     <script>
         (function() {
-            // ПЕРЕВОДЫ — все 6 языков, включая новые ключи для страховых пакетов
             const translations = {
                 hy: {
                     intro_title: "Գլխավոր (ներածություն)",
                     intro_text: "Ինտերնետը դարձել է մեր կյանքի կարևոր մասը։ Մենք շփվում ենք, սովորում, խաղում և տեղեկություններ ենք ստանում առցանց միջավայրում։ Սակայն ինտերնետը կարող է ունենալ նաև վտանգներ։ Այդ վտանգներից մեկը կիբերբուլինգն է։ Այս կայքի նպատակն է օգնել մարդկանց հասկանալ, թե ինչ է կիբերբուլինգը, ինչ վնաս կարող է պատճառել և ինչպես կարելի է պաշտպանվել դրանից։",
                     what_title: "Ինչ է կիբերբուլինգը",
-                    what_text: "Կիբերբուլինգը մարդկանց նկատմամբ իրականացվող վիրավորանքն ու ճնշումն է ինտերնետի միջոցով։ Դա կարող է լինել սոցիալական ցանցերում վիրավորական մեկնաբանություններ գրելը, կեղծ լուրեր տարածելը, անձնական լուսանկարներ տարածելը կամ սպառնալը հաղորդագրությունների միջոցով։ Կիբերբուլինգը հաճախ տեղի է ունենում այնպիսի հարթակներում, ինչպիսիք են սոցիալական ցանցերը, մեսենջերները կամ խաղային չաթերը։",
+                    what_text: "Կիբերբուլինգը մարդկանց նկատմամբ իրականացվող վիրավորանքն ու ճնշումն է ինտերնետի միջոցով։ Դա կարող է լինել սոցիալական ցանցերում վիրավորական մեկնաբանություններ գրելը, կեղծ լուրեր տարածելը, անձնական լուսանկարներ տարածելը կամ սպառնալը հաղորդագրությունների միջոցով։",
                     examples_title: "Կիբերբուլինգի օրինակներ",
                     examples_item1: "Վիրավորական կամ ծաղրական մեկնաբանություններ գրել",
                     examples_item2: "Անձի մասին կեղծ տեղեկություններ տարածել",
@@ -414,18 +545,25 @@
                     protect_item3: "Մի պատասխանիր վիրավորական հաղորդագրություններին",
                     protect_item4: "Բլոկ արա և զեկուցիր վիրավորող օգտատերերին",
                     protect_item5: "Պատմիր ծնողներին, ուսուցիչներին կամ վստահելի մեծահասակին",
-                    // страховые пакеты
                     insurance_main_title: "Ապահովագրական փաթեթներ",
                     insurance_main_desc: "Մեր ընկերությունը առաջարկում է երեք տարբեր ապահովագրական փաթեթներ, որոնք նախատեսված են կիբերբուլինգի և կիբերանվտանգության տարբեր ռիսկերից պաշտպանվելու համար։",
                     basic_title: "Հիմնական փաթեթ",
                     basic_desc: "Այս փաթեթը նախատեսված է այն մարդկանց համար, ովքեր ցանկանում են ունենալ հիմնական պաշտպանություն ինտերնետում։ Այն ներառում է կիբերբուլինգի դեպքերի ուսումնասիրություն և մասնագիտական խորհրդատվություն։",
-                    basic_amount: "500,000 դրամ առավելագույնը",
+                    basic_amount: "500,000 դրամ փոխհատուցում",
+                    basic_monthly: "Ամսական 41,700 դրամ",
                     medium_title: "Միջին փաթեթ",
                     medium_desc: "Այս փաթեթը ապահովում է ավելի լայն պաշտպանություն։ Այն ներառում է աջակցություն կիբերբուլինգի, տվյալների արտահոսքի և առցանց սպառնալիքների դեպքում։",
-                    medium_amount: "1,500,000 դրամ առավելագույնը",
+                    medium_amount: "1,500,000 դրամ փոխհատուցում",
+                    medium_monthly: "Ամսական 125,000 դրամ",
                     premium_title: "Պրեմիում փաթեթ",
                     premium_desc: "Պրեմիում փաթեթը նախատեսված է առավելագույն պաշտպանության համար։ Այն ներառում է ամբողջական կիբերանվտանգության աջակցություն, իրավաբանական խորհրդատվություն և տեխնիկական օգնություն։",
-                    premium_amount: "5,000,000 դրամ առավելագույնը",
+                    premium_amount: "5,000,000 դրամ փոխհատուցում",
+                    premium_monthly: "Ամսական 416,700 դրամ",
+                    contact_title: "Փաթեթներին ավելի մանրամասն ծանոթանալու համար",
+                    phone: "+37498455252",
+                    instagram: "ԹԱԱԱ.ընկերություն",
+                    address: "Քաղաք Գյումրի, Կոմիտասի 11",
+                    contact_hint: "զանգահարեք, գրեք կամ այցելեք մեր գրասենյակ",
                     remember_title: "Հիշիր",
                     remember_text: "Ինտերնետը պետք է լինի անվտանգ և հարգալից միջավայր բոլորի համար։ Յուրաքանչյուր մարդ արժանի է հարգանքի և անվտանգության։ Եթե դու կամ քո ընկերներից մեկը բախվում է կիբերբուլինգի, շատ կարևոր է չլռել և օգնություն խնդրել։"
                 },
@@ -433,7 +571,7 @@
                     intro_title: "Главная (введение)",
                     intro_text: "Интернет стал важной частью нашей жизни. Мы общаемся, учимся, играем и получаем информацию онлайн. Однако интернет может также иметь опасности. Одна из этих опасностей - кибербуллинг. Цель этого сайта - помочь людям понять, что такое кибербуллинг, какой вред он может причинить и как защититься от него.",
                     what_title: "Что такое кибербуллинг?",
-                    what_text: "Кибербуллинг - это оскорбление и давление на людей через интернет. Это может быть написание оскорбительных комментариев в социальных сетях, распространение ложных слухов, распространение личных фотографий или угрозы через сообщения. Кибербуллинг часто происходит на таких платформах, как социальные сети, мессенджеры или игровые чаты.",
+                    what_text: "Кибербуллинг - это оскорбление и давление на людей через интернет. Это может быть написание оскорбительных комментариев в социальных сетях, распространение ложных слухов, распространение личных фотографий или угрозы через сообщения.",
                     examples_title: "Примеры кибербуллинга",
                     examples_item1: "Написание оскорбительных или насмешливых комментариев",
                     examples_item2: "Распространение ложной информации о человеке",
@@ -453,18 +591,25 @@
                     protect_item3: "Не отвечайте на оскорбительные сообщения",
                     protect_item4: "Блокируйте и жалуйтесь на оскорбляющих пользователей",
                     protect_item5: "Расскажите родителям, учителям или доверенному взрослому",
-                    // страховые пакеты
                     insurance_main_title: "Страховые пакеты",
                     insurance_main_desc: "Наша компания предлагает три различных страховых пакета, предназначенных для защиты от различных рисков кибербуллинга и кибербезопасности.",
                     basic_title: "Базовый пакет",
                     basic_desc: "Этот пакет предназначен для людей, которые хотят иметь базовую защиту в интернете. Он включает анализ случаев кибербуллинга и профессиональную консультацию.",
-                    basic_amount: "500 000 драмов максимум",
+                    basic_amount: "500 000 драмов возмещение",
+                    basic_monthly: "Ежемесячно 41 700 драм",
                     medium_title: "Средний пакет",
                     medium_desc: "Этот пакет обеспечивает более широкую защиту. Он включает поддержку в случаях кибербуллинга, утечки данных и онлайн-угроз.",
-                    medium_amount: "1 500 000 драмов максимум",
+                    medium_amount: "1 500 000 драмов возмещение",
+                    medium_monthly: "Ежемесячно 125 000 драм",
                     premium_title: "Премиум пакет",
                     premium_desc: "Премиум пакет предназначен для максимальной защиты. Он включает полную поддержку кибербезопасности, юридическую консультацию и техническую помощь.",
-                    premium_amount: "5 000 000 драмов максимум",
+                    premium_amount: "5 000 000 драмов возмещение",
+                    premium_monthly: "Ежемесячно 416 700 драм",
+                    contact_title: "Для более подробного ознакомления с пакетами",
+                    phone: "+37498455252",
+                    instagram: "ԹԱԱԱ.ընկերություն",
+                    address: "Город Гюмри, Комитаса 11",
+                    contact_hint: "звоните, пишите или посетите наш офис",
                     remember_title: "Запомните",
                     remember_text: "Интернет должен быть безопасной и уважительной средой для всех. Каждый человек заслуживает уважения и безопасности. Если вы или один из ваших друзей сталкиваетесь с кибербуллингом, очень важно не молчать и просить о помощи."
                 },
@@ -472,7 +617,7 @@
                     intro_title: "Introduction",
                     intro_text: "The internet has become an important part of our lives. We communicate, learn, play and receive information online. However, the internet can also have dangers. One of these dangers is cyberbullying. The purpose of this site is to help people understand what cyberbullying is, what harm it can cause and how to protect themselves from it.",
                     what_title: "What is cyberbullying?",
-                    what_text: "Cyberbullying is the insult and pressure of people through the internet. It can be writing offensive comments on social networks, spreading false rumors, sharing personal photos, or threatening through messages. Cyberbullying often occurs on platforms such as social networks, messengers or gaming chats.",
+                    what_text: "Cyberbullying is the insult and pressure of people through the internet. It can be writing offensive comments on social networks, spreading false rumors, sharing personal photos, or threatening through messages.",
                     examples_title: "Examples of cyberbullying",
                     examples_item1: "Writing offensive or mocking comments",
                     examples_item2: "Spreading false information about a person",
@@ -492,18 +637,25 @@
                     protect_item3: "Do not respond to offensive messages",
                     protect_item4: "Block and report offending users",
                     protect_item5: "Tell parents, teachers or a trusted adult",
-                    // insurance packages
                     insurance_main_title: "Insurance packages",
                     insurance_main_desc: "Our company offers three different insurance packages designed to protect against various risks of cyberbullying and cybersecurity.",
                     basic_title: "Basic package",
                     basic_desc: "This package is intended for people who want to have basic protection on the internet. It includes analysis of cyberbullying cases and professional advice.",
-                    basic_amount: "500,000 dram maximum",
+                    basic_amount: "500,000 dram compensation",
+                    basic_monthly: "Monthly 41,700 dram",
                     medium_title: "Medium package",
                     medium_desc: "This package provides broader protection. It includes support in case of cyberbullying, data leakage and online threats.",
-                    medium_amount: "1,500,000 dram maximum",
+                    medium_amount: "1,500,000 dram compensation",
+                    medium_monthly: "Monthly 125,000 dram",
                     premium_title: "Premium package",
                     premium_desc: "The premium package is designed for maximum protection. It includes full cybersecurity support, legal advice and technical assistance.",
-                    premium_amount: "5,000,000 dram maximum",
+                    premium_amount: "5,000,000 dram compensation",
+                    premium_monthly: "Monthly 416,700 dram",
+                    contact_title: "For more details about the packages",
+                    phone: "+37498455252",
+                    instagram: "ԹԱԱԱ.ընկերություն",
+                    address: "Gyumri, Komitas 11",
+                    contact_hint: "call, write or visit our office",
                     remember_title: "Remember",
                     remember_text: "The internet should be a safe and respectful environment for everyone. Every person deserves respect and safety. If you or one of your friends is experiencing cyberbullying, it is very important not to remain silent and ask for help."
                 },
@@ -511,7 +663,7 @@
                     intro_title: "Introdução",
                     intro_text: "A Internet tornou-se uma parte importante das nossas vidas. Comunicamos, aprendemos, jogamos e recebemos informações online. No entanto, a Internet também pode ter perigos. Um desses perigos é o cyberbullying. O objetivo deste site é ajudar as pessoas a entender o que é o cyberbullying, que danos pode causar e como se proteger dele.",
                     what_title: "O que é cyberbullying?",
-                    what_text: "Cyberbullying é o insulto e pressão sobre as pessoas através da internet. Pode ser escrever comentários ofensivos nas redes sociais, espalhar rumores falsos, partilhar fotos pessoais ou ameaçar através de mensagens. O cyberbullying ocorre frequentemente em plataformas como redes sociais, mensageiros ou chats de jogos.",
+                    what_text: "Cyberbullying é o insulto e pressão sobre as pessoas através da internet. Pode ser escrever comentários ofensivos nas redes sociais, espalhar rumores falsos, partilhar fotos pessoais ou ameaçar através de mensagens.",
                     examples_title: "Exemplos de cyberbullying",
                     examples_item1: "Escrever comentários ofensivos ou zombeteiros",
                     examples_item2: "Espalhar informações falsas sobre uma pessoa",
@@ -531,18 +683,25 @@
                     protect_item3: "Não responda a mensagens ofensivas",
                     protect_item4: "Bloqueie e denuncie utilizadores ofensivos",
                     protect_item5: "Conte aos pais, professores ou um adulto de confiança",
-                    // pacotes de seguro
                     insurance_main_title: "Pacotes de seguro",
                     insurance_main_desc: "Nossa empresa oferece três pacotes de seguro diferentes projetados para proteger contra vários riscos de cyberbullying e segurança cibernética.",
                     basic_title: "Pacote Básico",
                     basic_desc: "Este pacote é destinado a pessoas que desejam ter proteção básica na internet. Inclui análise de casos de cyberbullying e aconselhamento profissional.",
-                    basic_amount: "500.000 drams máximo",
+                    basic_amount: "500.000 drams compensação",
+                    basic_monthly: "Mensal 41.700 drams",
                     medium_title: "Pacote Intermediário",
                     medium_desc: "Este pacote oferece uma proteção mais ampla. Inclui suporte em caso de cyberbullying, vazamento de dados e ameaças online.",
-                    medium_amount: "1.500.000 drams máximo",
+                    medium_amount: "1.500.000 drams compensação",
+                    medium_monthly: "Mensal 125.000 drams",
                     premium_title: "Pacote Premium",
                     premium_desc: "O pacote premium é projetado para máxima proteção. Inclui suporte completo de segurança cibernética, aconselhamento jurídico e assistência técnica.",
-                    premium_amount: "5.000.000 drams máximo",
+                    premium_amount: "5.000.000 drams compensação",
+                    premium_monthly: "Mensal 416.700 drams",
+                    contact_title: "Para mais detalhes sobre os pacotes",
+                    phone: "+37498455252",
+                    instagram: "ԹԱԱԱ.ընկերություն",
+                    address: "Gyumri, Komitas 11",
+                    contact_hint: "ligue, escreva ou visite nosso escritório",
                     remember_title: "Lembre-se",
                     remember_text: "A Internet deve ser um ambiente seguro e respeitoso para todos. Cada pessoa merece respeito e segurança. Se você ou um dos seus amigos estiver a sofrer cyberbullying, é muito importante não ficar calado e pedir ajuda."
                 },
@@ -550,7 +709,7 @@
                     intro_title: "Вступ",
                     intro_text: "Інтернет став важливою частиною нашого життя. Ми спілкуємося, навчаємося, граємо та отримуємо інформацію онлайн. Однак інтернет також може мати небезпеки. Однією з таких небезпек є кібербулінг. Мета цього сайту – допомогти людям зрозуміти, що таке кібербулінг, якої шкоди він може завдати та як захиститися від нього.",
                     what_title: "Що таке кібербулінг?",
-                    what_text: "Кібербулінг – це образи та тиск на людей через інтернет. Це може бути написання образливих коментарів у соціальних мережах, поширення неправдивих чуток, поширення особистих фотографій або погрози через повідомлення. Кібербулінг часто відбувається на таких платформах, як соціальні мережі, месенджери або ігрові чати.",
+                    what_text: "Кібербулінг – це образи та тиск на людей через інтернет. Це може бути написання образливих коментарів у соціальних мережах, поширення неправдивих чуток, поширення особистих фотографій або погрози через повідомлення.",
                     examples_title: "Приклади кібербулінгу",
                     examples_item1: "Написання образливих або глузливих коментарів",
                     examples_item2: "Поширення неправдивої інформації про людину",
@@ -570,18 +729,25 @@
                     protect_item3: "Не відповідайте на образливі повідомлення",
                     protect_item4: "Блокуйте та скаржтеся на образливих користувачів",
                     protect_item5: "Розкажіть батькам, вчителям або довіреній дорослій людині",
-                    // страхові пакети
                     insurance_main_title: "Страхові пакети",
                     insurance_main_desc: "Наша компанія пропонує три різні страхові пакети, призначені для захисту від різних ризиків кібербулінгу та кібербезпеки.",
                     basic_title: "Базовий пакет",
                     basic_desc: "Цей пакет призначений для людей, які хочуть мати базовий захист в інтернеті. Він включає аналіз випадків кібербулінгу та професійну консультацію.",
-                    basic_amount: "500 000 драмів максимум",
+                    basic_amount: "500 000 драмів відшкодування",
+                    basic_monthly: "Щомісяця 41 700 драм",
                     medium_title: "Середній пакет",
                     medium_desc: "Цей пакет забезпечує ширший захист. Він включає підтримку у випадках кібербулінгу, витоку даних та онлайн-загроз.",
-                    medium_amount: "1 500 000 драмів максимум",
+                    medium_amount: "1 500 000 драмів відшкодування",
+                    medium_monthly: "Щомісяця 125 000 драм",
                     premium_title: "Преміум пакет",
                     premium_desc: "Преміум пакет призначений для максимального захисту. Він включає повну підтримку кібербезпеки, юридичну консультацію та технічну допомогу.",
-                    premium_amount: "5 000 000 драмів максимум",
+                    premium_amount: "5 000 000 драмів відшкодування",
+                    premium_monthly: "Щомісяця 416 700 драм",
+                    contact_title: "Для більш детального ознайомлення з пакетами",
+                    phone: "+37498455252",
+                    instagram: "ԹԱԱԱ.ընկերություն",
+                    address: "Місто Гюмрі, Комітаса 11",
+                    contact_hint: "телефонуйте, пишіть або відвідайте наш офіс",
                     remember_title: "Запам'ятайте",
                     remember_text: "Інтернет має бути безпечним і шанобливим середовищем для всіх. Кожна людина заслуговує на повагу та безпеку. Якщо ви або хтось із ваших друзів стикається з кібербулінгом, дуже важливо не мовчати і звернутися по допомогу."
                 },
@@ -589,7 +755,7 @@
                     intro_title: "Introdução",
                     intro_text: "A Internet se tornou uma parte importante de nossas vidas. Nós nos comunicamos, aprendemos, jogamos e recebemos informações online. No entanto, a Internet também pode ter perigos. Um desses perigos é o cyberbullying. O objetivo deste site é ajudar as pessoas a entender o que é o cyberbullying, que danos pode causar e como se proteger dele.",
                     what_title: "O que é cyberbullying?",
-                    what_text: "Cyberbullying é o insulto e pressão sobre as pessoas através da internet. Pode ser escrever comentários ofensivos nas redes sociais, espalhar boatos falsos, compartilhar fotos pessoais ou ameaçar por meio de mensagens. O cyberbullying geralmente ocorre em plataformas como redes sociais, aplicativos de mensagens ou chats de jogos.",
+                    what_text: "Cyberbullying é o insulto e pressão sobre as pessoas através da internet. Pode ser escrever comentários ofensivos nas redes sociais, espalhar boatos falsos, compartilhar fotos pessoais ou ameaçar por meio de mensagens.",
                     examples_title: "Exemplos de cyberbullying",
                     examples_item1: "Escrever comentários ofensivos ou de zombaria",
                     examples_item2: "Espalhar informações falsas sobre uma pessoa",
@@ -609,18 +775,25 @@
                     protect_item3: "Não responda a mensagens ofensivas",
                     protect_item4: "Bloqueie e denuncie usuários ofensivos",
                     protect_item5: "Conte aos pais, professores ou a um adulto de confiança",
-                    // pacotes de seguro
                     insurance_main_title: "Pacotes de seguro",
                     insurance_main_desc: "Nossa empresa oferece três pacotes de seguro diferentes, projetados para proteger contra vários riscos de cyberbullying e segurança cibernética.",
                     basic_title: "Pacote Básico",
                     basic_desc: "Este pacote é destinado a pessoas que desejam ter proteção básica na internet. Inclui análise de casos de cyberbullying e aconselhamento profissional.",
-                    basic_amount: "500.000 drams no máximo",
+                    basic_amount: "500.000 drams compensação",
+                    basic_monthly: "Mensal 41.700 drams",
                     medium_title: "Pacote Intermediário",
                     medium_desc: "Este pacote oferece uma proteção mais ampla. Inclui suporte em caso de cyberbullying, vazamento de dados e ameaças online.",
-                    medium_amount: "1.500.000 drams no máximo",
+                    medium_amount: "1.500.000 drams compensação",
+                    medium_monthly: "Mensal 125.000 drams",
                     premium_title: "Pacote Premium",
                     premium_desc: "O pacote premium é projetado para máxima proteção. Inclui suporte completo de segurança cibernética, aconselhamento jurídico e assistência técnica.",
-                    premium_amount: "5.000.000 drams no máximo",
+                    premium_amount: "5.000.000 drams compensação",
+                    premium_monthly: "Mensal 416.700 drams",
+                    contact_title: "Para mais detalhes sobre os pacotes",
+                    phone: "+37498455252",
+                    instagram: "ԹԱԱԱ.ընկերություն",
+                    address: "Gyumri, Komitas 11",
+                    contact_hint: "ligue, escreva ou visite nosso escritório",
                     remember_title: "Lembre-se",
                     remember_text: "A Internet deve ser um ambiente seguro e respeitoso para todos. Cada pessoa merece respeito e segurança. Se você ou um de seus amigos estiver sofrendo cyberbullying, é muito importante não ficar calado e pedir ajuda."
                 }
@@ -631,29 +804,21 @@
 
             function switchLanguage(lang) {
                 if (!translations[lang]) return;
-
                 i18nElements.forEach(el => {
                     const key = el.getAttribute('data-i18n');
                     if (translations[lang][key]) {
-                        // для insurance-amount нужно сохранить html (внутри small), но мы передаем текст с small внутри? в наших переводах есть "максимум" как часть строки. упростим: innerHTML
                         el.innerHTML = translations[lang][key];
                     }
                 });
-
                 langButtons.forEach(btn => {
-                    const btnLang = btn.getAttribute('data-lang');
-                    btn.classList.toggle('active', btnLang === lang);
+                    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
                 });
             }
 
             langButtons.forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    switchLanguage(e.currentTarget.getAttribute('data-lang'));
-                });
+                btn.addEventListener('click', (e) => switchLanguage(e.currentTarget.getAttribute('data-lang')));
             });
 
-            // активный язык при загрузке — армянский
-            // уже установлен в разметке, но синхронизируем тексты на всякий случай
             switchLanguage('hy');
         })();
     </script>
